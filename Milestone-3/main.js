@@ -125,6 +125,7 @@ let valueSelected = document.getElementById("filter")
 //aggiungiamo un eventListener per cambio del valore 
 valueSelected.addEventListener("change", function () {
     allIcons.forEach((element, index, array) => {
+        if (valueSelected.value == element.type || valueSelected.value == "all") {
         let iconColor = ""
         if (element.type == 'user') {
             iconColor = "purple"
@@ -141,7 +142,8 @@ valueSelected.addEventListener("change", function () {
                     </div>`
         //console.log(cardIcon)
         let rowCards = document.querySelector(".row");
-        rowCards.innerHTML += cardIcon
+            rowCards.innerHTML += cardIcon
+        }
     })
 
 })
