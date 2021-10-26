@@ -104,6 +104,12 @@ allIcons.forEach((element, index, array) => {
     if (element.type == 'user') {
         iconColor = "purple"
     }
+    else if (element.type == 'vegetable') {
+        iconColor = "orange"
+    }
+    else if (element.type == 'animal') {
+        iconColor = "blue"
+    }
     let cardIcon = `<div class="card">
                         <i style="color: ${iconColor};"class="${element.family} ${element.prefix}${element.name}"></i>
                         <h6>${element.name}</h6>
