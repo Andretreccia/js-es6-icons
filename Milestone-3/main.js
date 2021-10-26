@@ -154,7 +154,7 @@ valueSelected.addEventListener("change", function () {
         //variabile con valore l'elemento da inserire nella DOM
         let cardIcon = `<div class="card">
                         <i style="color: ${iconColor};"class="${element.family} ${element.prefix}${element.name}"></i>
-                        <h6>${element.name}</h6>
+                        <h6>${element.name.toUpperCase()}</h6>
                     </div>`
         //console.log(cardIcon)
 
