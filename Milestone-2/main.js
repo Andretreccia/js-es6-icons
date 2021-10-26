@@ -98,31 +98,29 @@ const allIcons = [
 ];
 
 //con un cilo aggiungere le card a schermo
+
 allIcons.forEach((element, index, array) => {
+    let iconColor = ""
+    if (element.type == 'user') {
+        iconColor = "purple"
+    }
     let cardIcon = `<div class="card">
-                        <i class="${element.family} ${element.prefix}${element.name} color"></i>
+                        <i style="color: ${iconColor};"class="${element.family} ${element.prefix}${element.name}"></i>
                         <h6>${element.name}</h6>
                     </div>`
     //console.log(cardIcon)
     let rowCards = document.querySelector(".row");
     rowCards.innerHTML += cardIcon
-    if (element.type == 'user') {
-        document.querySelectorAll(".color").className += "purple"
-    }
 })
 
-//funzione per colorare
+
+//PERCHÈ NON FUNZIONAVA??
+/* //funzione per colorare
 //selezionare tutti gli oggetti con chiave type
-/* allIcons.forEach((element) => {
+ allIcons.forEach((element) => {
     if (element.type == 'user') {
-        let cardIconDOM = document.querySelectorAll(".fa-");
+        let cardIconDOM = document.querySelectorAll(".color");
         cardIconDOM.classList.add("purple");
+        document.querySelectorAll(".color").className += "purple"
     }
-})
-console.log(cardIconDOM) */
-    //se la chiave ha valore user
-        //aggiungi classe colore
-    //se la cchiave ha valore vegetable
-        //aggiungi classe colore
-    //se la chiave ha valore animal
-        //aggiungi classe colore
+}) */
