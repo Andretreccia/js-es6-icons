@@ -99,7 +99,7 @@ const allIcons = [
 
 //con un cilo aggiungere le card a schermo
 
-allIcons.forEach((element, index, array) => {
+/* allIcons.forEach((element, index, array) => {
     let iconColor = ""
     if (element.type == 'user') {
         iconColor = "purple"
@@ -117,4 +117,31 @@ allIcons.forEach((element, index, array) => {
     //console.log(cardIcon)
     let rowCards = document.querySelector(".row");
     rowCards.innerHTML += cardIcon
+}) */
+
+/* Creiamo una select con i tipi di icone e usiamola per filtrare le icone */
+//selezioniamo il select nella DOM
+let valueSelected = document.getElementById("filter")
+//aggiungiamo un eventListener per cambio del valore 
+valueSelected.addEventListener("change", function () {
+    allIcons.forEach((element, index, array) => {
+        let iconColor = ""
+        if (element.type == 'user') {
+            iconColor = "purple"
+        }
+        else if (element.type == 'vegetable') {
+            iconColor = "orange"
+        }
+        else if (element.type == 'animal') {
+            iconColor = "blue"
+        }
+        let cardIcon = `<div class="card">
+                        <i style="color: ${iconColor};"class="${element.family} ${element.prefix}${element.name}"></i>
+                        <h6>${element.name}</h6>
+                    </div>`
+        //console.log(cardIcon)
+        let rowCards = document.querySelector(".row");
+        rowCards.innerHTML += cardIcon
+    })
+
 })
