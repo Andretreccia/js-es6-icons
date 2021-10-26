@@ -122,8 +122,10 @@ const allIcons = [
 /* Creiamo una select con i tipi di icone e usiamola per filtrare le icone */
 //selezioniamo il select nella DOM
 let valueSelected = document.getElementById("filter")
+let rowCards = document.querySelector(".row");
 //aggiungiamo un eventListener per cambio del valore 
 valueSelected.addEventListener("change", function () {
+    rowCards.innerHTML = ""
     allIcons.forEach((element, index, array) => {
         if (valueSelected.value == element.type || valueSelected.value == "all") {
         let iconColor = ""
@@ -141,7 +143,6 @@ valueSelected.addEventListener("change", function () {
                         <h6>${element.name}</h6>
                     </div>`
         //console.log(cardIcon)
-        let rowCards = document.querySelector(".row");
             rowCards.innerHTML += cardIcon
         }
     })
