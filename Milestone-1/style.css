@@ -1,0 +1,35 @@
+
+/* header */
+.bar_logo > h1{
+    color: rgb(6, 185, 230);
+    margin: 0.5rem;
+}
+.navb{
+    background-color: rgb(6, 185, 230);;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.navb > h6{
+    color: white;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+}
+/* main */
+main{
+    background: lightgrey;
+}
+.container{
+    height: 800px;
+}
+.row{
+    justify-content: space-between;
+}
+.card{
+    height: 100px;
+    width: 180px;
+    background: rgb(238, 238, 238);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
